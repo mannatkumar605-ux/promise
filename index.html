@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Promise Day Shambhavi ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 50px;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 22px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+button {
+    margin: 15px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background: white;
+    color: #ff4b7d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4b7d;
+    color: white;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 30px yellow; }
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: #ff4b7d;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>💍 Happy Promise Day 💍</h1>
+    <h2>My Dear Shambhavi ❤️</h2>
+
+    <p>
+        Shambhavi, on this Promise Day,  
+        I promise to always stand by your side,  
+        to love you endlessly,  
+        and to never leave you at any moment in my life.  
+        You are my forever. 💖
+    </p>
+
+    <button onclick="playMusic()">Play Our Song 🎵</button>
+    <br>
+    <button onclick="propose()">Will You Stay With Me Forever? 💍</button>
+</div>
+
+<div class="popup" id="lovePopup">
+    Yayyyy ❤️🥰 <br><br>
+    Thank you for saying YES Shambhavi!  
+    I promise to love you forever 💖  
+    Forever Yours, Mannat 💞
+</div>
+
+<footer>
+    Forever Yours, Mannat 💕
+</footer>
+
+<audio id="bgMusic" src="song.mp3"></audio>
+
+<script>
+function playMusic() {
+    document.getElementById("bgMusic").play();
+}
+
+function propose() {
+    document.getElementById("lovePopup").style.display = "block";
+}
+
+// Floating hearts
+setInterval(function(){
+    var heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    }, 5000);
+}, 500);
+</script>
+
+</body>
+</html>
